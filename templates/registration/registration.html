@@ -1,0 +1,29 @@
+{% extends "temp_prof/temp_prof.html" %}
+{% block title %}
+	Регистрация
+{% endblock title %}
+{% block form %}
+	<div class="bgRegPage" style="--bg: #ffffcc">
+		<div class="registerBox">
+			<h2>Регистрация</h2>
+			<form action="{% url 'mainpage:signup' %}" method="POST">
+				{% csrf_token %}
+				<a>{{ error }}</a>
+				<p>Имя пользователя</p>
+				<input type="text" name="username" minlength="3" maxlength="90" required>
+				<p>Электронная почта</p>
+				<input type="email" name="email" required>
+				<p>Пароль</p>
+				<input type="password" name="password" minlength="8" required>
+				<input type="submit" value="Зарегестрироваться">
+				<a href="{% url 'auth:login' %}">Уже есть аккаунт? Войти</a>
+			</form>
+		</div>
+	</div>
+{% endblock form %}
+
+{% block back-to %}
+    <a href="{% url 'mainpage:index' %}">
+		На главную
+	</a>
+{% endblock back-to %}

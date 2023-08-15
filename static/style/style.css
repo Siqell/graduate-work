@@ -1,0 +1,1493 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #ffffcc;
+}
+
+.bg-all-page{
+	background: url(/static/image/BG2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	min-height: 100vh;
+
+}
+
+
+/* Голова сайта */
+.header {
+	position: relative;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+.navigatin {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+}
+.navigatin ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.nav-link{
+	display: flex;
+	width: 220px;
+	justify-content: center;
+
+}
+.nav-link a{
+	position: relative;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 0px 0px 4px #222;
+	text-transform: uppercase;
+	font-family: 'M PLUS 1', sans-serif;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.nav-link a::after{
+	font-size: 30px;
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: orange;
+	border-bottom: 3px solid rgba(70, 70, 70, .85);
+	overflow: hidden;
+	text-shadow: 0px 0px 4px #222;
+	transition: height .6s, border-bottom .6s;
+}
+.nav-link a:hover::after{
+	height: 0%;
+}
+
+
+
+/* Окончание головы */
+
+/*//////////////////////\\\\\\\\\\\\\\\\\\\\\*/
+
+/* welcome-tag */
+
+.welcome {
+	position: absolute;
+	top: 216px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	cursor: default;
+}
+.welcome a{
+
+	text-decoration: underline;
+	color: #666766;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	cursor: default;
+
+}
+
+
+/* welcome-tag КОНЕЦ */
+
+/*//////////////////////\\\\\\\\\\\\\\\\\\\\\*/
+
+/* content(тело сайта) */
+
+.conteiner {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 100px 0px;
+	background: transparent;
+	object-fit: cover;
+}
+
+
+
+	/* втупительный блок О сайте */
+
+.welcome-block {
+
+	width: 800px;
+	display: flex;
+	justify-content: center;
+}
+
+.brief-about{
+	max-width: 500px;
+	text-align: center;
+}
+
+.brief-about h3{
+	
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+}
+.brief-about a{
+
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+}
+
+	/* втупительный блок О сайте КОНЕЦ*/
+
+	/* контентная часть */
+
+
+#contein-pop-course{
+	padding-bottom: 40px;
+}
+
+.content {
+	width: 66vw;
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 25px;
+	padding: 40px;
+}
+
+.content h2{
+	margin-bottom: 30px;
+	text-decoration-skip: ink;
+	text-decoration: underline;
+	font-family: 'M PLUS 1', sans-serif;
+	color: #dddddd;
+	font-size: 32px;
+}
+
+
+
+
+
+ */
+
+		/* Эта вставка для страницы курса */
+			.course-contein{
+
+			}
+			.content-course{
+				margin: 160px 0;
+				width: 60%;
+				display: flex;
+				justify-content: center;
+				flex-direction: row;
+				flex-wrap: wrap;
+				background: rgba(238, 238, 204, .85);
+				border-radius: 20px;
+				box-shadow: 0px 2px 6px rgba(0, 0, 0, .36);
+			}
+			.text-course {
+				width: 80%;
+				padding: 14px 0px;
+				transition: .5s;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				position: relative;
+			}
+			.text-course h2{
+				padding-top: 40px;
+				display: inline-block;
+				width: 100%;
+				margin-bottom: 40px;
+				line-height: 1.5;
+				border-bottom: 3px solid #777777;
+			}
+			.text-course h2 a{
+				padding-bottom: 10px;
+				color: #333333;
+				font-family: 'PT Sans', sans-serif;
+				font-weight: bold;
+			}
+
+			.text-course p{
+				text-decoration: none;
+				font-family: 'PT Sans', sans-serif;
+				color: black;
+				font-size: 18px;
+				cursor: default;
+				margin: 8px 0;
+				text-indent: 30px;
+				line-height: 30px;
+				color: #333333;
+				text-align: justify;
+			}
+
+			
+
+			.insert {
+				width: 80%;
+				height: 80px;
+				background: #ffffcc;
+				border-radius: 10px;
+			}
+			.to-tasks {
+				width: 80%;
+				text-align: end;
+				padding: 20px 0;
+				position: relative;
+			}
+			.to-tasks a{
+				text-decoration: none;
+				color: #555555;
+				position: absolute;
+				right: 10px;
+				bottom: 14px;
+				
+			}
+			.to-tasks a::after{
+				position: absolute;
+				content: " >";
+				font-weight: 500;
+				right: -14px;
+			}
+			.to-tasks a:hover{
+			}
+
+			
+			
+
+		/* вставки для страницы курса КОНЕЦ*/
+
+
+		/* Втавка для страницы О нас */
+			.about-contein{
+
+			}
+
+
+			.about-block {
+				font-family: 'M PLUS 1', sans-serif;
+				position: relative;
+				top: 120px;
+				width: 60vw;
+				margin: 0px 0px 160px 0px;
+				background: rgba(256, 256, 204, .8);
+				border-radius: 14px;
+				border: 3px solid rgba(200, 200, 180);
+			}
+
+			.about-text{ 
+				padding: 30px;
+				text-align: center;
+			}
+			.about-text h3{
+				color: #555;
+				text-indent: 40px;
+				font-size: 32px;
+				margin: 20px 0px 50px 0px;
+			}
+
+			.about-text h4{
+				color: #555;
+				font-size: 26px;
+				margin: 50px 0px;
+				font-weight: 400;
+			}
+
+
+
+
+
+
+		/* Втавка для страницы О нас КОНЕЦ*/
+
+.content-block .small-text a{
+	
+	font-family: 'PT Sans', sans-serif;
+
+	font-size: 16px;
+	text-align: justify;
+	display: inline-block;
+	margin: 30px 0;
+}
+
+
+
+
+
+
+.popular-course{
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+.course{
+	width: 260px;
+	display: flex;
+	flex-direction: column;
+}
+
+.img{
+	position: relative;
+	width: 100%;
+	height: 160px;
+	transform: translateY(60px);
+	opacity: 0;
+	transition: .4s;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0px 3px 6px black;
+	margin-bottom: 12px;
+	border-bottom: 2px solid rgba(0, 0, 0, .6);
+	border-top: 2px solid rgba(0, 0, 0, .6);
+
+	border-radius: 8px;
+
+
+}
+
+.img a{
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	border-radius: 8px;
+}
+
+.name-course{
+	transform: translateY(40px);
+	opacity: 0;
+	font-size: 20px;
+
+	text-decoration-skip: ink;
+	text-decoration: underline;
+	color: #dddddd;
+	transition: .46s;
+	text-align: center;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: bold;
+	transition: .2s;
+}
+
+.name-course:hover{
+	color: #eeeeee;
+}
+
+
+.all-course{
+	position: absolute;
+	right: 30px;
+	top: -80px;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.all-course:hover a{
+	transform: scale(101%);
+	color: #eeeeee;
+}
+
+.all-course a{
+	display: inline-block;
+	text-decoration: none;
+	color: #dddddd;
+	transition: .2s;
+}
+
+.anim_scroll{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+	/* контентная часть КОНЕЦ*/
+
+
+	/* страница всех курсов */
+
+	.courses-contein{
+
+	}
+
+	.cont-razd {
+		position: relative;
+		top: 120px;
+		width: 60%;
+		font-family: 'PT Sans', sans-serif;
+		background: rgb(204, 204, 204, .5);
+		border: 4px solid #444444;
+		border-radius: 20px;
+		margin-bottom: 140px;
+	}
+
+	.cont-razd h2{
+		font-size: 26px;
+		margin-bottom: 30px;
+		padding: 30px 40px 0px 40px;
+	}
+
+	.razdeli{
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 20px 50px;
+	}
+	.razdeli form{
+		width: 30%;
+		text-align: center;
+		position: relative;
+	}
+
+
+	.nameCourse{
+		position: relative;
+		text-decoration: none;
+		color: black;
+		background: transparent;
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+		display: inline-block;
+		width: 100%;
+		left: 0;
+		font-weight: bold;
+		bottom: 26px;
+		padding-top: 30px;
+		box-shadow: 0px 1px 3px black;
+		text-shadow: 0px 0px 0.5px #222;
+	}
+
+	.record{
+		display: block;
+		position: relative;
+		text-decoration: none;
+		color: black;
+		background: transparent;
+		border: none;
+		border-radius: 15px;
+		border-bottom: 2px solid #444444;
+		display: inline-block;
+		width: 100%;
+		left: 0;
+		bottom: 16px;
+		height: 24px;
+		cursor: pointer;
+		font-size: 15px;
+		font-weight: bold;
+		box-shadow: 0px 0px 3px black;
+		text-shadow: 0px 0px 0.5px #222;
+	}
+	
+
+
+
+
+
+
+	.img-cours{
+		width: 100%;
+		height: 160px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 0px -1px 6px black;
+		opacity: 1;
+		position: relative;
+		z-index: 1000;
+		border-bottom-right-radius: 25px;
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 25px;
+
+	}
+	.img-cours span{
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.img-cours span a{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.img-cours span a::after{
+		display: none;
+	}
+
+	/* страница всех курсов КОНЕЦ*/
+
+
+
+	/* страница задач */
+	.tasks-contein{
+		min-height: 54vh;
+	}
+
+	.tasks-block {
+		width: 56vw;
+		font-family: 'PT Sans', sans-serif;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		position: relative;
+		align-items: center;
+		
+	}
+	.tasks-block form{
+		background-color: rgba(256, 256, 204, .8);
+		padding: 30px 20px;
+		width: 88%;
+		border-left: 10px solid rgba(0, 0, 0, 0.85);
+		border-right: 10px solid rgba(0, 0, 0, 0.85);;
+		margin: 20px 0px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.tasks-block form p{
+		padding: 12px 0px;
+		color: #333333;
+		font-size: 18px;
+		text-align: justify;
+		line-height: 1.5;
+	}
+
+	.tasks-block form input[type = "text"]{
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.85);
+		padding: 4px;
+		outline: none;
+		color: #333333;
+		font-size: 16px;
+		width: 60%;
+		margin-right: 20px;
+	}
+	.tasks-block form input[type = "text"]::-moz-placeholder{
+		color: rgba(0, 0, 0, 0.6);
+	}
+	.tasks-block form input[type = "text"]::-webkit-input-placeholder{
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+
+
+	.tasks-block form input[type = "submit"]{
+		border: none;
+		color: #333333;
+		font-weight: bold;
+		background: transparent;
+		padding: 3px;
+		border-radius: 12px;
+
+		border: 3px solid rgba(0, 0, 0, 0.85);
+		transition: 0s;
+		cursor: pointer;
+	}
+
+	.tasks-block form input[type = "submit"]:hover{
+		background: rgba(0, 0, 0, 0.1);
+	}
+
+
+	.id_answer{
+		display: none;
+	}
+
+	/* страница задач КОНЕЦ*/
+
+
+
+	/* Результаты по задачим курса */
+		.results {
+			width: 34vw;
+			background-color: rgba(0, 0, 0, .4);
+			border-radius: 14px;
+			padding: 20px;
+			font-family: 'M PLUS 1', sans-serif;
+		}
+
+		.results h2{
+			color: #dddddd;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		.results p{
+			font-size: 22px;
+			margin: 22px 0px;
+			color: #dddddd;
+		}
+
+		.block-lists{
+			width: 100%;
+			display: flex;
+		}
+
+		.block-lists ul{
+			width: 50%;
+			list-style: none;
+			margin-bottom: 30px;
+		}
+
+
+
+		.block-lists ul li{
+			border-bottom: 2px solid #dddddd;
+		}
+
+		.block-lists ul li a{
+			font-size: 18px;
+			font-weight: bold;
+			color: #dddddd;
+		}
+
+		.result-list li{
+			text-align: end;
+		}
+
+		.result-block>p{
+			border-top: 3px solid #dddddd;
+			border-bottom: 3px solid #dddddd;
+		}
+
+		.result-block>a{
+			font-size: 18px;
+			font-weight: bold;
+			color: #dddddd;
+		}
+
+
+	/* Результаты по задачим курса КОНЕЦ */
+
+	/* профиль */
+
+
+	.profile{
+		position: relative;
+		width: 34%;
+		padding: 30px 90px;
+		background: rgba(70, 70, 70, .85);
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0px 0px 12px #666666;
+		border: 2px solid #666666;
+		align-items: center;
+	}
+
+
+	.static-list {
+
+	}
+	.dinamic-list li{
+		text-align: end;
+
+	}
+
+	.user-menu{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	.user-menu ul{
+		list-style: none;
+		position: relative;
+		width: 50%;
+	}
+
+	.user-menu ul li{
+		margin: 0px 0px 20px 0px;
+
+	}
+
+	.user-menu ul li a{
+		color: #bbbbbb;
+		font-family: 'M PLUS 1', sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+
+	}
+
+	.course_li{
+		/*  */
+	}
+	
+	.course_li a{
+		text-decoration: underline;
+		text-decoration-skip: ink;
+	}
+
+	.course_li a:hover{
+		color: #dddddd;
+	}
+
+
+
+	.record_on_courses a:hover{
+		color: #dddddd;
+	}
+
+
+
+	.btn-s{
+		position: relative;
+		bottom: 20px;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		flex: wrap;
+		align-items: center;
+		list-style: none;
+		width: 100%;
+		margin-top: 30px;
+	}
+
+	.btn-s li{
+		margin: 10px 0px;
+		width: 100%;
+		
+	}
+
+	.btn-s li a{
+		color: #bbbbbb;
+		font-family: 'M PLUS 1', sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		max-width: 100%;
+	}
+
+	.logout-btn{
+		text-align: center;
+	}
+
+	.logout-btn a{
+		display: block;
+		text-decoration: none;
+		padding: 6px;
+		border-bottom: 2px solid #999999;
+		border-top: 2px solid #999999;
+		border-radius: 10px;
+	}
+	.logout-btn a:hover{
+		border-bottom: 2px solid #dddddd;
+		border-top: 2px solid #dddddd;
+		color: #dddddd;
+	}
+
+	.create-course-btn{
+		text-align: center;
+	}
+
+	.create-course-btn a{
+		display: block;
+		text-decoration: none;
+		padding: 6px;
+		border-bottom: 2px solid #999999;
+		border-top: 2px solid #999999;
+		border-radius: 10px;
+	}
+	.create-course-btn a:hover{
+		border-bottom: 2px solid #dddddd;
+		border-top: 2px solid #dddddd;
+		color: #dddddd;
+	}
+
+	.add-task-to-course-btn{
+		text-align: center;
+	}
+
+	.add-task-to-course-btn a{
+		display: block;
+		text-decoration: none;
+		padding: 6px;
+		border-bottom: 2px solid #999999;
+		border-top: 2px solid #999999;
+		border-radius: 10px;
+	}
+
+
+	.add-task-to-course-btn a:hover{
+		border-bottom: 2px solid #dddddd;
+		border-top: 2px solid #dddddd;
+		color: #dddddd;
+	}
+
+
+	.manage_courses{
+		text-align: center;
+	}
+
+	.manage_courses a{
+		display: block;
+		text-decoration: none;
+		padding: 6px;
+		border-bottom: 2px solid #999999;
+		border-top: 2px solid #999999;
+		border-radius: 10px;
+	}
+
+
+	.manage_courses a:hover{
+		border-bottom: 2px solid #dddddd;
+		border-top: 2px solid #dddddd;
+		color: #dddddd;
+	}
+
+
+	.avatar-block{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		align-items: center;
+	}
+
+	.avatar{
+		width: 150px;
+		height: 180px;
+		border-radius: 14px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		border-radius: 14px;
+		border: 3px solid black;
+
+	}
+
+
+	.txt-avatar{
+		display: block;
+		width: 120px;
+		padding: 6px;
+		margin-top: 10px;
+		text-align: center;
+		text-decoration: none;
+		color: #bbbbbb;
+		transition: color .4s;
+		border-radius: 10px;
+		border-bottom: 2px solid #bbbbbb;
+		border-top: 2px solid #bbbbbb;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.txt-avatar:hover{
+		color: #dddddd;
+		border-bottom: 2px solid #dddddd;
+		border-top: 2px solid #dddddd;
+	}
+
+
+		/* Форма загрузки аватарки */
+		.avatar-block form input[type='file']{
+			position: absolute;
+			visibility: hidden;
+		}
+
+		.avatar-block form input[type='submit']{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			background-color: transparent;
+			right: 0px;
+			border-radius: 50%;
+			transform: translate(0%,-110%);
+			border: 2px solid #bbbbbb;
+			background-image: url(/static/image/icon-accept.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 80%;
+			cursor: pointer;
+		}
+
+		.avatar-block form input[type='submit']:hover{
+			background-color: rgba(0, 0, 0, .05);
+			border: 2px solid #dddddd;
+			background-image: url(/static/image/icon-accept-hover.png);
+			
+		}
+
+		/* Форма загрузки аватарки КОНЕЦ */
+
+
+	/* профиль КОНЕЦ */
+
+
+	/* старницы создания курса и добавления заданий */
+
+	
+	.form-add,
+	.form-create {
+		background-color: rgba(0, 0, 0, .4);
+		width: 300px;
+		padding: 30px;
+		border-radius: 14px;
+	}
+
+	.form-add form,
+	.form-create form{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form-add h2,
+	.form-create h2 {
+		font-family: 'M PLUS 1', sans-serif;
+		text-align: center;
+		color: #cccccc;
+		margin-bottom: 12px;
+
+	}
+
+	.form-add select{
+		width: 60%;
+		margin: 8px 0px 14px 0;
+		padding: 4px 6px;
+		background-color: transparent;
+		border: none;
+		color: #dddddd;
+		outline: none;
+		font-family: 'M PLUS 1', sans-serif;
+		font-weight: bold;
+	}
+
+
+	.form-add select>option{
+		background-color: #222;
+		font-family: 'M PLUS 1', sans-serif;
+		font-weight: bold;
+	}
+
+
+
+	.form-add p,
+	.form-create p{
+		font-weight: bold;
+		color: #cccccc;
+		font-family: 'M PLUS 1', sans-serif;
+	}
+
+	.form-create input[type = 'file']{
+		position: absolute;
+		visibility: hidden;
+	}
+
+	.form-add input[type = 'text'],
+	.form-create input[type = 'text']{
+		border: none;
+		width: 60%;
+		margin: 8px 0px 14px 0;
+		padding: 4px 6px;
+		background-color: transparent;
+		border-bottom: 2px solid #111;
+		color: #cccccc;
+		outline: none;
+		font-family: 'M PLUS 1', sans-serif;
+		font-weight: bold;
+	}
+
+	.form-add input[type = 'text']{
+
+	}
+
+	.form-create label{
+		margin: 14px 0px;
+		width: 60%;
+		padding: 8px 6px;
+		text-align: center;
+		background-color: orange;
+		border-radius: 14px;
+		cursor: pointer;
+	}
+
+	.form-create label:hover{
+		background-color: darkorange;
+	}
+
+	.form-create label span{
+		width: 100%;
+		color: #333;
+	}
+
+	.form-add input[type = 'submit'],
+	.form-create input[type = 'submit']{
+		width: 40%;
+		padding: 8px 6px;
+		margin: 14px 0px;
+		border-radius: 14px;
+		background-color: transparent;
+		color: #cccccc;
+		cursor: pointer;
+	}
+	.form-add input[type = 'submit']:hover,
+	.form-create input[type = 'submit']:hover{
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	/* старницы создания курса и добавления заданий КОНЕЦ */
+
+
+/* content(тело сайта) КОНЕЦ*/
+
+/*//////////////////////\\\\\\\\\\\\\\\\\\\\\*/
+
+/* footer(ноги сайта) */
+
+
+.footer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0px;
+	z-index: 1000;
+}
+
+.info {
+	height: 120px;
+	display: flex;
+	width: 100%;
+	padding: 40px 0px;
+	border-bottom: none;
+	background: transparent;
+	justify-content: space-evenly;
+}
+
+.footer ul{
+	font-family: 'M PLUS 1', sans-serif;
+	list-style: none;
+}
+.footer ul li h3{
+	font-size: 28px;
+	font-weight: bold;
+	padding-bottom: 6px;
+}
+
+.footer ul li a{
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	transition: .4s;
+}
+
+.footer ul li a:hover{
+	color: #444444;
+}
+
+/* footer(ноги сайта) КОНЕЦ*/
+
+
+
+
+/* auth page */
+
+.bgLoginPage {
+	width: 100%;
+	height: 100%;
+}
+.loginBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: rgba(0, 0, 0, 0.85);
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 420px;
+	padding: 60px 30px;
+	box-sizing: border-box;
+	border-radius: 14px;
+}
+
+
+.loginBox h2{
+	margin: 0;
+	text-align: center;
+	font-family: 'M PLUS 1', sans-serif;
+	color: #dddddd;
+}
+.loginBox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #dddddd;
+
+	font-family: 'M PLUS 1', sans-serif;
+}
+
+.loginBox form{
+	padding: 20px 10px;
+	/* background: #ffffcc; */
+	border-radius: 14px;
+}
+
+
+.loginBox input{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"]{
+	border: none;
+	border-bottom: 1.6px solid #dddddd;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #dddddd;
+	font-size: 15px;
+}
+
+::placeholder{
+	color: rgba(0, 0, 0, .5);
+}
+
+.loginBox input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #dddddd;
+	color: #111;
+	border-radius: 18px;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: 'M PLUS 1', sans-serif;
+	transition: transform .6s, background .6s, color .3s, box-shadow .6s;
+}
+
+.loginBox input[type="submit"]:hover{
+	background: #aacccc;
+	transform: translateY(-3px);
+	box-shadow: 0px 3px 4px black;
+}
+
+.loginBox a{
+	color: #dddddd;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.back-to-home {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	padding: 10px 10px;
+	cursor: pointer;
+}
+
+.back-to-home a{
+	display: inline-block;
+	transform: translate(6px, 0px);
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'M PLUS 1', sans-serif;
+	color: black;
+	transition: transform .5s;
+	font-weight: 600;
+	padding-right: 3px;
+	border-right: 2px solid black;
+}
+
+.back-to-home a::before{
+	position: absolute;
+	content: "< ";
+	font-family: 'M PLUS 1', sans-serif;
+	opacity: 0;
+	transition: opacity .3s, transform .5s;
+	transform: translateY(-8%);
+}
+
+.back-to-home:hover a {
+	transform: translate(16px, 0px);
+}
+.back-to-home:hover a::before {
+	transform: translate(-14px, -8%);
+	opacity: 1;
+	transition: opacity .5s, transform .5s;
+}
+/* auth page КОНЕЦ*/
+
+
+/* register page */
+
+.bgRegPage {
+	width: 100%;
+	height: 100%;
+}
+.registerBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: rgba(0, 0, 0, 0.85);
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 500px;
+	padding: 60px 30px;
+	box-sizing: border-box;
+	border-radius: 14px;
+}
+
+
+.registerBox h2{
+	margin: 0;
+	color: #dddddd;
+	text-align: center;
+	font-family: 'M PLUS 1', sans-serif;
+}
+.registerBox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #dddddd;
+	font-family: 'M PLUS 1', sans-serif;
+}
+
+.registerBox form{
+	padding: 20px 10px;
+	/* background: #ffffcc; */
+	border-radius: 14px;
+}
+
+
+.registerBox input{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+
+.registerBox input[type="text"],
+.registerBox input[type="email"],
+.registerBox input[type="password"]{
+	border: none;
+	border-bottom: 1.6px solid #dddddd;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #dddddd;
+	font-size: 15px;
+}
+
+::placeholder{
+	color: rgba(239, 239, 239, .5);
+}
+
+.registerBox input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #dddddd;
+	color: #111;
+	border-radius: 18px;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: 'M PLUS 1', sans-serif;
+	transition: transform .6s, background .6s, color .3s, box-shadow .6s;
+}
+
+.registerBox input[type="submit"]:hover{
+	background: #aacccc;
+	transform: translateY(-3px);
+	box-shadow: 0px 3px 4px black;
+}
+
+.registerBox a{
+	color: #dddddd;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* register page КОНЕЦ*/
+
+
+
+
+/*      Слайдер         */
+
+
+
+.slider-contein{
+	padding: 55px;
+}
+
+.slider{
+	position: relative;
+	width: 72vw;
+	height: 72vh;
+	background: #ffffcc;
+	box-shadow: 0px 3px 12px black;
+	z-index: 900;
+	left: 50%;
+	top: 50%;
+	margin: 0;
+	transform: translate(-50%, 0);
+}
+
+.slider .imgBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.slider .imgBox img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: .5s;
+	background-position: center;
+}
+
+
+.slider .imgBox img.active{
+	opacity: 1;
+}
+
+.controls{
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	width: 100%;
+}
+.controls li{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: #ffffcc;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.controls li:hover{
+	background: #999999;
+}
+
+
+
+
+.controls li:nth-child(1){
+	border-top-right-radius: 40%;
+	border-bottom-right-radius: 40%;
+}
+.controls li:nth-child(2){
+	border-bottom-left-radius: 40%;
+	border-top-left-radius: 40%;
+}
+
+
+
+
+.controls li::before{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-left: 3px solid #222;
+	border-bottom: 3px solid #222;
+	transform: rotate(45deg);
+}
+
+.controls li:nth-child(2)::before{
+	transform: rotate(225deg);
+}
+
+/*      /\Слайдер/\     */
+
+
+
+
+/* Управление курсами */
+
+.manage_conteiner {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.manage_box {
+	width: 60%;
+	padding: 60px 50px;
+	background-color: rgba(0, 0, 0, 0.85);
+	border-radius: 14px;
+}
+
+
+
+
+.manage_box form{
+	position: relative;
+	border: 3px solid #dddddd;
+	padding: 20px 10px;
+	border-radius: 14px;
+	margin: 40px 0px;
+	background-color: #dddddd;
+}
+
+
+.manage_box form a{
+	display: inline-block;
+	width: 80%;
+	font-size: 30px;
+	text-decoration: none;
+	color: #333333;
+}
+
+.manage_box form input[type="submit"]{
+	border: none;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 6px;
+	border-radius: 14px;
+	cursor: pointer;
+	background-color: #dddddd;
+	border: 4px solid rgba(0, 0, 0, 0.85);
+	transition: border .4s;
+}
+
+.manage_box form input[type="submit"]:hover{
+	background-color: #bbbbbb;
+}
+
+
+

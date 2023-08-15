@@ -1,0 +1,43 @@
+{% extends 'base_temp/base_template.html' %}
+
+{% block title %}
+	Результаты по курсу: {{ course_name }}
+{% endblock title %}
+
+{% block content %}
+	<div class="conteiner">
+		<div class="results">
+			<h2>КУРС: {{ course_name }}</h2>
+			{% for task in tasks_this_course %}
+				<div class="result-block">
+					<p>{{ task.text_task }}</p>
+					 
+					{% if all_results %}
+						{% for result in all_results %}
+						
+							{% if result.task_id == task.id %}
+								<div class="block-lists">
+									<ul class="user-name-list">
+										<li><a>{{ result.user.username }}</a></li>
+									</ul>
+									<ul class="result-list">
+									{% if result.user_answer == '1' %}
+										<li><a>Верно</a></li>
+									{% else %}
+										<li><a>Неверно</a></li>
+									{% endif %}
+									</ul>
+								</div>
+							{% endif %}
+						{% endfor %}
+					{% else %}
+						<a>Результатов нет...</a>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+		
+		
+	</div>
+
+{% endblock content %}

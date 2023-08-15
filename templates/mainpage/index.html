@@ -1,0 +1,46 @@
+{% extends "base_temp/base_template.html" %}
+
+{% block title %}
+	Главная страница
+{% endblock title %}
+
+{% block welcome %}<!--<a href="">Welcome to the self education platform</a> -->{% endblock %}
+
+
+{% block content %}
+	{% load static %}
+	<div class="slider-contein">
+		<section class="slider">
+			<div class="imgBox">
+				<img src="{% static 'image/1.jpg' %}" class='active'>
+				<img src="{% static 'image/2.jpg' %}">
+				<img src="{% static 'image/3.jpg' %}">
+				<img src="{% static 'image/4.jpg' %}">
+			</div>
+			<ul class="controls">
+				<li onclick="PrevSlide()"></li>
+				<li onclick="nextSlide()"></li>
+			</ul>
+		</section>
+	</div>
+	<div class="conteiner" id="contein-pop-course" style="z-index: 800">
+		<div class="content">
+			
+			<h2>Популярные курсы:</h2>
+			
+			<div class="popular-course">
+				{% if three_courses_in_start %}
+					{% for course in three_courses_in_start %}
+						<div class="course">
+							<div class="img animScroll no-anim-after" style="background-image: url({{ course.image.url }})"><a href="{% url 'courses:courseView' course.id %}"></a></div>
+							<a href="{% url 'courses:courseView' course.id %}" class="name-course animScroll no-anim-after">{{ course.name_course }}</a>
+						</div>
+					{% endfor %}
+				{% endif %}
+				<div class="all-course"><a href="{% url 'courses:courses' %}">Перейти на страницу курсов</a></div>
+			</div>
+		</div>
+	</div>
+
+	
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base_temp/base_template.html' %}
+{% block title %}
+	Добавить задание к курсу
+{% endblock title %}
+{% block content %}
+    <div class="conteiner">
+		<div class="form-add">
+			<form action="{% url 'courses:add_task_to_course' %}" method="POST">
+				{% csrf_token %}
+				<h2>Добавить задание</h2>
+				<p>Текст задания:</p>
+				{{ form.course }}
+				<p>Текст задания:</p>
+				{{ form.text_task }}
+				<p>Правильный ответ:</p>
+				{{ form.right_answer }}
+				<input type="submit" value="Добавить">
+			</form>
+		</div>
+		
+	</div>
+{% endblock content %}

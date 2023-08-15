@@ -1,0 +1,32 @@
+{% extends "base_temp/base_template.html" %}
+
+{% block title %}Задания по курсу: {{ course_name }}{% endblock %}
+	
+{% block content %}
+
+<div class="conteiner tasks-contein">
+	<div class="tasks-block">
+	{% for task in all_tasks_this_course %}
+		<form action="{% url 'courses:check_answer' id_course %}" method="POST">
+			{% csrf_token %}
+			<p>{{ task.text_task }}</p>
+			<input type="text" name="answer" placeholder="Сюда надо ответ написать...">
+			<input class="id_answer" type="text" name="id" value="{{ task.id }}">
+			<input type="submit" value="Ответить">
+			{% for answer in all_answer_this_user %}
+				{% if answer.task_id == task.id %}
+					{% if answer.user_answer == '1' %}
+						<p>Верно</p>
+					{% elif answer.user_answer == '0' %}
+						<p>Неверно</p>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</form>
+		
+	{% endfor %}
+	</div>
+</div>
+{% endblock %}
+
+

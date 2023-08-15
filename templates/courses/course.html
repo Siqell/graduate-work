@@ -1,0 +1,26 @@
+{% extends "base_temp/base_template.html" %}
+{% block title %}
+	{{ this_course.name_course }}
+{% endblock title %}
+
+
+
+	
+{% block content %}
+	<div class="conteiner course-contein">
+		<div class="content-course">
+			<div class="text-course"> 
+				<h2><a>{{ this_course.name_course }}</a></h2>
+				{% for paragraph in text_course %}
+					<p>{{ paragraph.text }}</p>
+				{% endfor %}
+				
+			</div>
+			<div class="to-tasks">
+				<a href="{% url 'courses:tasks' id_course %}">To Tasks</a>
+			</div>
+		</div> 
+	</div>
+{% endblock %}
+
+	

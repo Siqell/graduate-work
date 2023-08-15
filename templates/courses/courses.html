@@ -1,0 +1,43 @@
+{% extends "base_temp/base_template.html" %}
+
+{% block title %}
+	Курсы
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+	<div class="conteiner courses-contein">
+		<div class="cont-razd">
+			<h2>Доступные курсы:</h2>
+			{% if all_courses_list %}
+				<div class="razdeli">
+				{% for course in all_courses_list %}
+						<form action="{% url 'courses:record' %}" method="POST">
+						{% csrf_token %}
+							{% if course.image == 'defaultImage.jpg' %}
+								<div class="img-cours" style="background-image: url(/static/image/defaultImage.jpg)">
+							{% else %}
+								<div class="img-cours" style="background-image: url({{ course.image.url }})">
+							{% endif %}
+									<span>
+										<a href="{% url 'courses:courseView' course.id %}"></a>
+									</span>
+								</div>
+								<a href="{% url 'courses:courseView' course.id %}" class="nameCourse">{{ course.name_course }}</a>
+								{% if user.is_authenticated %}
+									{% if group != 'prepod' %}
+										<input type="submit" name="record" class="record" value="Записаться на курс">
+										<input type="hidden" value="{{course.id}}" name='id_course'>
+									{% endif %}
+								{% else %}
+									<a href="{% url 'auth:login' %}" class='record'>Записаться на курс</a>
+								{% endif %}
+						</form>
+				{% endfor %}
+				</div>
+			{% else %}
+				<p>No courses are available.</p>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

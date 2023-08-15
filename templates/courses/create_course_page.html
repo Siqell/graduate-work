@@ -1,0 +1,29 @@
+{% extends "base_temp/base_template.html" %}
+
+{% block title %}Создать курс{% endblock %}
+
+{% block content %}
+	<div class="conteiner">
+		<div class="form-create">
+			<form action="{% url 'courses:create_course' %}" method="POST"  enctype="multipart/form-data">
+				{% csrf_token %}
+				<h2>Создать курс</h2>
+				<p>Название курса:</p>
+				{{ form.name_course }}
+				{{ form.file_course }}
+				<label for="id_file_course">
+					<span class='input__file-text'>Файл курса</span>
+				</label>
+				{{ form.image }}
+				<label for="id_image"> 
+					<span class='input__file-text'>Фото курса</span>
+				</label>
+				<input type="hidden" value="{{ user_id }}" name='creator_id'>
+				<input type="submit" value="Создать">
+			</form>
+		</div>
+		
+	</div>
+	
+
+{% endblock %}

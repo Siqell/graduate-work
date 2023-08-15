@@ -1,0 +1,24 @@
+{% extends "temp_prof/temp_prof.html" %}
+
+{% block title %}Управаление курсами{% endblock %}
+
+{% block form %}
+	<div class="manage_conteiner">
+		<div class="manage_box">
+			{% for course in courses_this_user %}
+				<form action="{% url 'courses:delete_record' %}" method="POST">
+				{% csrf_token %}
+					<a href="{% url 'courses:courseView' course.id %}">{{ course.name_course }}</a>
+					<input type="submit" name="delete" value = 'Отписаться от курса'>
+					<input type="hidden" value="{{course.id}}" name='id_course'>
+				</form>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock form %}
+
+{% block back-to %}
+    <a href="{% url 'mainpage:profile' %}">
+		Вернуться в профиль
+	</a>
+{% endblock back-to %}

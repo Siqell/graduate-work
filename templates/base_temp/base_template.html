@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}Document{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'style/style.css' %}">
+
+	<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=M+PLUS+1:wght@400;500;600;700&family=PT+Sans:wght@400;700&family=Work+Sans:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+	<div class="bg-all-page">
+		<div class="header">
+			<div class="navigatin">
+				<ul>
+					<li class="nav-link"><a href="{% url 'mainpage:index' %}" data-text="Главная">Главная</a></li>
+					<li class="nav-link"><a href="{% url 'courses:courses' %}" data-text="Курсы">Курсы</a></li>
+					<li class="nav-link"><a href="{% url 'mainpage:about' %}" data-text="О нас">О нас</a></li>
+					{% if user.is_authenticated %}
+						<li class="nav-link"><a href="{% url 'mainpage:profile' %}" data-text="Профиль">Профиль</a></li>
+					{% else %}
+						
+						<li class="nav-link"><a href="{% url 'auth:login' %}" data-text="Войти">Войти</a></li>
+						
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+		<div class="welcome">
+			{% block welcome %}{% endblock %}
+		</div>
+
+		
+
+		{% block content %}
+
+		{% endblock %}
+			
+
+
+		<div class="footer">
+			<div class="info">
+				<ul>
+					<li><h3>Адрес:</h3></li>
+					<li><a href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%BC+%D0%9A%D0%BE%D0%BB%D0%BE%D1%82%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0./@53.715098,91.4227868,17.34z/data=!4m5!3m4!1s0x0:0x2881e3f6dfe09a4d!8m2!3d53.7148474!4d91.4231439">г.Чебоксары</a></li>
+					<li><a href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%BC+%D0%9A%D0%BE%D0%BB%D0%BE%D1%82%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0./@53.715098,91.4227868,17.34z/data=!4m5!3m4!1s0x0:0x2881e3f6dfe09a4d!8m2!3d53.7148474!4d91.4231439">ул.Пушкина</a></li>
+					<li><a href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%BC+%D0%9A%D0%BE%D0%BB%D0%BE%D1%82%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0./@53.715098,91.4227868,17.34z/data=!4m5!3m4!1s0x0:0x2881e3f6dfe09a4d!8m2!3d53.7148474!4d91.4231439">д.Колотушкина</a></li>
+				</ul>
+				<ul>
+					<li><h3>Контакты:</h3></li>
+					<li><a href="tel:333335">33-33-35</a></li>
+					<li><a href="tel:89008882929">+7(900)888-29-29</a></li>
+					<li><a href="tel:89018882929">+7(901)888-29-29</a></li>
+				</ul>
+				<ul>
+					<li><h3>Меню сайта:</h3></li>
+					<li><a href="{% url 'mainpage:about' %}">О нас</a></li>
+					<li><a href="{% url 'courses:courses' %}">Курсы</a></li>
+					{% if user.is_authenticated %}
+						<li><a href="{% url 'mainpage:profile' %}">Профиль</a></li>
+					{% else %}
+						<li><a href="{% url 'auth:login' %}">Войти</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+
+
+	</div>
+
+<!-- JS -->
+<script src="{% static 'js/script.js' %}"></script>
+	
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "temp_prof/temp_prof.html" %}
+{% block title %}
+	Авторизация
+{% endblock title %}
+{% block form %}
+	<div class="bgLoginPage" style="--bg: #ffffcc">
+		<div class="loginBox">
+			<h2>Вход</h2>
+		
+			<form action="{% url 'auth:login' %}" method="post">
+			{% csrf_token %}
+				<p>Имя пользователя</p>
+				{{ form.username }}
+				<p>Пароль</p>
+				{{ form.password }}
+				<input type="submit" name="signIn" value="Войти">
+				<a href="{% url 'mainpage:regpage' %}">Нет аккаунта? Регистрация</a>
+			</form>
+		</div>
+	</div>
+{% endblock form %}
+
+{% block back-to %}
+    <a href="{% url 'mainpage:index' %}">
+		На главную
+	</a>
+{% endblock back-to %}
+
